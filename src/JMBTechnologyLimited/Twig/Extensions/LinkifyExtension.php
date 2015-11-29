@@ -7,8 +7,7 @@ namespace JMBTechnologyLimited\Twig\Extensions;
  * Based on https://github.com/fabpot/Twig-extensions/pull/64/files
  * We added  target=\"_blank\"
  *
- * @link http://ican.openacalendar.org/ OpenACalendar Open Source Software
- * @license http://ican.openacalendar.org/license.html 3-clause BSD
+ * @license https://github.com/JMB-Technology-Limited/Twig-Extensions/blob/master/LICENSE.txt 3-clause BSD
  * @copyright (c) 2013-2015, JMB Technology Limited, http://jmbtechnology.co.uk/
  */
 class LinkifyExtension extends \Twig_Extension

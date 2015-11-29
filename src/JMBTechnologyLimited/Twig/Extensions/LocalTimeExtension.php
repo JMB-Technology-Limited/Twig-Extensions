@@ -5,8 +5,7 @@ namespace JMBTechnologyLimited\Twig\Extensions;
 /**
  * With help from https://matt.drollette.com/2012/07/user-specific-timezones-with-symfony2-and-twig-extensions/ - Thanks!
  * 
- * @link http://ican.openacalendar.org/ OpenACalendar Open Source Software
- * @license http://ican.openacalendar.org/license.html 3-clause BSD
+ * @license https://github.com/JMB-Technology-Limited/Twig-Extensions/blob/master/LICENSE.txt 3-clause BSD
  * @copyright (c) 2013-2015, JMB Technology Limited, http://jmbtechnology.co.uk/
  */
 class LocalTimeExtension extends \Twig_Extension
