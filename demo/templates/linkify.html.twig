@@ -6,5 +6,8 @@
 		<p>
 			{{ 'Visit http://ican.openacalendar.org/ for more' | linkify }}
 		</p>
+		<p>
+			{{ 'Visit http://ican.openacalendar.org/ for more (in a new window)' | linkify({ 'attr': { 'target':'_blank' } } ) }}
+		</p>
 	</body>
 </html>

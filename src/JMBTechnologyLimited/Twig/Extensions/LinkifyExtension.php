@@ -13,6 +13,13 @@ namespace JMBTechnologyLimited\Twig\Extensions;
 class LinkifyExtension extends \Twig_Extension
 {
 
+    protected $linkify;
+
+    function __construct($options = array())
+    {
+        $this->linkify = new \Misd\Linkify\Linkify(is_array($options) ? $options : array());
+    }
+
     public function getFunctions()
     {
         return array();
@@ -25,11 +32,8 @@ class LinkifyExtension extends \Twig_Extension
         );
     }
 
-    public function linkify($text) {
-		$text= preg_replace("/(^|[\n ])([\w]*?)((ht|f)tp(s)?:\/\/[\w]+[^ \,\"\n\r\t<]*)/is", "$1$2<a href=\"$3\"  target=\"_blank\">$3</a>", $text);
-		$text= preg_replace("/(^|[\n ])([\w]*?)((www|ftp)\.[^ \,\"\t\n\r<]*)/is", "$1$2<a href=\"http://$3\"  target=\"_blank\">$3</a>", $text);
-		$text= preg_replace("/(^|[\n ])([a-z0-9&\-_\.]+?)@([\w\-]+\.([\w\-\.]+)+)/i", "$1<a href=\"mailto:$2@$3\">$2@$3</a>", $text);
-		return $text;
+    public function linkify($text, $options=array()) {
+		return $this->linkify->process($text, is_array($options) ? $options : array());
     }
 
     public function getName()
