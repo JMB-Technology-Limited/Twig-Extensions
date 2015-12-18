@@ -4,8 +4,6 @@ namespace JMBTechnologyLimited\Twig\Extensions;
 
 
 /**
- * Based on https://github.com/fabpot/Twig-extensions/pull/64/files
- * We added  target=\"_blank\"
  *
  * @license https://github.com/JMB-Technology-Limited/Twig-Extensions/blob/master/LICENSE.txt 3-clause BSD
  * @copyright (c) JMB Technology Limited, http://jmbtechnology.co.uk/
