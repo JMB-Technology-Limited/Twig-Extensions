@@ -15,7 +15,7 @@ use JMBTechnologyLimited\Twig\Extensions\LinkifyExtension;
 
 /**
  * @license https://github.com/JMB-Technology-Limited/Twig-Extensions/blob/master/LICENSE.txt 3-clause BSD
- * @copyright (c) 2013-2015, JMB Technology Limited, http://jmbtechnology.co.uk/
+ * @copyright (c) JMB Technology Limited, http://jmbtechnology.co.uk/
  */
 
 ########################################################################################## Linkify
