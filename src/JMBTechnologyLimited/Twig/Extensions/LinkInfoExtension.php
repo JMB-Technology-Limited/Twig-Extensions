@@ -11,6 +11,9 @@ namespace JMBTechnologyLimited\Twig\Extensions;
 class LinkInfoExtension extends \Twig_Extension
 {
 
+    const TWIG_EXTENSION_NAME = 'jmbtechnologylimited_linkinfo';
+    const FILTER_NAME_LINK_INFO = 'linkinfo';
+
     public function getFunctions()
     {
         return array();
@@ -19,7 +22,7 @@ class LinkInfoExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'linkinfo' => new \Twig_Filter_Method($this, 'linkinfo', array()),
+            static::FILTER_NAME_LINK_INFO => new \Twig_Filter_Method($this, 'linkinfo', array()),
         );
     }
 
@@ -30,6 +33,6 @@ class LinkInfoExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'jmbtechnologylimited_linkinfo';
+        return static::TWIG_EXTENSION_NAME;
     }
 }

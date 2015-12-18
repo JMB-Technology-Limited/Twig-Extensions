@@ -12,6 +12,8 @@ namespace JMBTechnologyLimited\Twig\Extensions;
 class SameDayExtension extends \Twig_Extension
 {
 
+    const TWIG_EXTENSION_NAME = 'jmbtechnologylimited_sameday';
+    const FUNCTION_NAME_SAMEDAY = 'sameday';
 
     public function getFilters()
     {
@@ -21,7 +23,7 @@ class SameDayExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'sameday' => new \Twig_Function_Method($this, 'sameday'),
+            static::FUNCTION_NAME_SAMEDAY => new \Twig_Function_Method($this, 'sameday'),
         );
     }
 
@@ -34,7 +36,7 @@ class SameDayExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'jmbtechnologylimited_sameday';
+        return static::TWIG_EXTENSION_NAME;
     }
 }
 

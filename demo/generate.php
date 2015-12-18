@@ -14,25 +14,24 @@ use JMBTechnologyLimited\Twig\Extensions\LinkifyExtension;
 
 
 /**
- * Based on https://github.com/fabpot/Twig-extensions/pull/64/files
- * We added  target=\"_blank\"
- *
  * @license https://github.com/JMB-Technology-Limited/Twig-Extensions/blob/master/LICENSE.txt 3-clause BSD
  * @copyright (c) 2013-2015, JMB Technology Limited, http://jmbtechnology.co.uk/
  */
 
-foreach(array(
-    array(
-        'extensions'=>array(new LinkifyExtension()),
-        'name'=>'linkify',
-    ),
-        ) as $data) {
+########################################################################################## Linkify
 
-    $loader = new Twig_Loader_Filesystem(array(__DIR__ . DIRECTORY_SEPARATOR . 'templates'));
-    $twig = new Twig_Environment($loader, array(
-    ));
-    foreach($data['extensions'] as $ext) {
-        $twig->addExtension($ext);
-    }
-    file_put_contents(__DIR__. DIRECTORY_SEPARATOR. 'out'. DIRECTORY_SEPARATOR. $data['name']. '.html', $twig->render($data['name'].'.html.twig'));
+
+class LinkifyExtensionInNewWindow extends LinkifyExtension {
+
+    const TWIG_EXTENSION_NAME = 'jmbtechnologylimited_linkifynew';
+    const FILTER_NAME_LINKIFY = 'linkifynew';
 }
+
+
+$loader = new Twig_Loader_Filesystem(array(__DIR__ . DIRECTORY_SEPARATOR . 'templates'));
+$twig = new Twig_Environment($loader, array(
+));
+$twig->addExtension(new LinkifyExtension());
+$twig->addExtension(new LinkifyExtensionInNewWindow(array('attr'=>array('_target'=>'blank'))));
+file_put_contents(__DIR__. DIRECTORY_SEPARATOR. 'out'. DIRECTORY_SEPARATOR. 'linkify.html', $twig->render('linkify.html.twig'));
+

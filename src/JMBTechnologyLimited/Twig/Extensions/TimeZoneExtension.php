@@ -10,11 +10,13 @@ namespace JMBTechnologyLimited\Twig\Extensions;
 class TimeZoneExtension extends \Twig_Extension
 {
 
+    const TWIG_EXTENSION_NAME = 'jmbtechnologylimited_timezone';
+    const FILTER_NAME_TO_TIMEZONE = 'totimezone';
 
     public function getFilters()
     {
         return array(
-            'totimezone' => new \Twig_Filter_Method($this, 'totimezone'),
+            static::FILTER_NAME_TO_TIMEZONE => new \Twig_Filter_Method($this, 'totimezone'),
         );
     }
 
@@ -47,7 +49,7 @@ class TimeZoneExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'jmbtechnologylimited_timezone';
+        return static::TWIG_EXTENSION_NAME;
     }
 }
 

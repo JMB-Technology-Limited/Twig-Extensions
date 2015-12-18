@@ -13,6 +13,9 @@ namespace JMBTechnologyLimited\Twig\Extensions;
 class LinkifyExtension extends \Twig_Extension
 {
 
+    const TWIG_EXTENSION_NAME = 'jmbtechnologylimited_linkify';
+    const FILTER_NAME_LINKIFY = 'linkify';
+
     protected $linkify;
 
     function __construct($options = array())
@@ -28,7 +31,7 @@ class LinkifyExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'linkify' => new \Twig_Filter_Method($this, 'linkify', array('pre_escape' => 'html','is_safe' => array('html'))),
+            static::FILTER_NAME_LINKIFY => new \Twig_Filter_Method($this, 'linkify', array('pre_escape' => 'html','is_safe' => array('html'))),
         );
     }
 
@@ -38,6 +41,6 @@ class LinkifyExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'jmbtechnologylimited_linkify';
+        return static::TWIG_EXTENSION_NAME;
     }
 }
