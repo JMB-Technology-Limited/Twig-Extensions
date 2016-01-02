@@ -32,6 +32,6 @@ $loader = new Twig_Loader_Filesystem(array(__DIR__ . DIRECTORY_SEPARATOR . 'temp
 $twig = new Twig_Environment($loader, array(
 ));
 $twig->addExtension(new LinkifyExtension());
-$twig->addExtension(new LinkifyExtensionInNewWindow(array('attr'=>array('_target'=>'blank'))));
+$twig->addExtension(new LinkifyExtensionInNewWindow(array('attr'=>array('target'=>'_blank'))));
 file_put_contents(__DIR__. DIRECTORY_SEPARATOR. 'out'. DIRECTORY_SEPARATOR. 'linkify.html', $twig->render('linkify.html.twig'));
 
