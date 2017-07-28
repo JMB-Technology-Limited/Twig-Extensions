@@ -13,8 +13,13 @@
             "role": "Developer"
         }
     ],
+    "config": {
+      "platform": {
+        "php": "7.0.0"
+      }
+    },
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=7.0.0",
         "misd/linkify": "1.1.*",
         "twig/twig": "2.*"
     },
