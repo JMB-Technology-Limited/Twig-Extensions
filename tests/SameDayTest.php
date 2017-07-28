@@ -1,10 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
+
 /*
  * @license https://github.com/JMB-Technology-Limited/Twig-Extensions/blob/master/LICENSE.txt 3-clause BSD
  * @copyright (c) JMB Technology Limited, http://jmbtechnology.co.uk/
  */
-class SameDayTest extends PHPUnit_Framework_TestCase {
+class SameDayTest extends TestCase {
 
     function sameDayTestProvider() {
         return array(
