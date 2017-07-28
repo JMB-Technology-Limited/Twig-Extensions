@@ -15,7 +15,7 @@ class TimeZoneExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            static::FILTER_NAME_TO_TIMEZONE => new \Twig_Filter_Method($this, 'totimezone'),
+             new \Twig_SimpleFilter(static::FILTER_NAME_TO_TIMEZONE, array($this, 'totimezone')),
         );
     }
 

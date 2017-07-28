@@ -28,7 +28,7 @@ class LinkifyExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            static::FILTER_NAME_LINKIFY => new \Twig_Filter_Method($this, 'linkify', array('pre_escape' => 'html','is_safe' => array('html'))),
+            new \Twig_SimpleFilter(static::FILTER_NAME_LINKIFY, array($this, 'linkify'), array('pre_escape' => 'html','is_safe' => array('html'))),
         );
     }
 

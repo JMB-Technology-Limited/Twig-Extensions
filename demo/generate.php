@@ -23,7 +23,6 @@ use JMBTechnologyLimited\Twig\Extensions\LinkifyExtension;
 
 class LinkifyExtensionInNewWindow extends LinkifyExtension {
 
-    const TWIG_EXTENSION_NAME = 'jmbtechnologylimited_linkifynew';
     const FILTER_NAME_LINKIFY = 'linkifynew';
 }
 

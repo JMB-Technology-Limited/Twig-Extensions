@@ -21,7 +21,7 @@ class LinkInfoExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            static::FILTER_NAME_LINK_INFO => new \Twig_Filter_Method($this, 'linkinfo', array()),
+            new \Twig_SimpleFilter(static::FILTER_NAME_LINK_INFO, array($this, 'linkinfo'), array()),
         );
     }
 

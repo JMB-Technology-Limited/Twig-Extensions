@@ -22,7 +22,7 @@ class SameDayExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            static::FUNCTION_NAME_SAMEDAY => new \Twig_Function_Method($this, 'sameday'),
+             new \Twig_SimpleFilter(static::FUNCTION_NAME_SAMEDAY, array($this, 'sameday')),
         );
     }
 
