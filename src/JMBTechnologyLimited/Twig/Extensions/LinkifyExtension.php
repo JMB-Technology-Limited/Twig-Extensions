@@ -11,7 +11,6 @@ namespace JMBTechnologyLimited\Twig\Extensions;
 class LinkifyExtension extends \Twig_Extension
 {
 
-    const TWIG_EXTENSION_NAME = 'jmbtechnologylimited_linkify';
     const FILTER_NAME_LINKIFY = 'linkify';
 
     protected $linkify;
@@ -37,8 +36,5 @@ class LinkifyExtension extends \Twig_Extension
 		return $this->linkify->process($text, is_array($options) ? $options : array());
     }
 
-    public function getName()
-    {
-        return static::TWIG_EXTENSION_NAME;
-    }
+
 }
