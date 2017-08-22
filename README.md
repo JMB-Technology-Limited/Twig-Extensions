@@ -3,6 +3,7 @@
 A set of Twig extensions. 
 
 V1 of Twig Extensions is for Twig V1.
+V2 is for Twig V2.
 
 ## LinkInfo
 
